@@ -1,3 +1,36 @@
+body {
+	background-color: #0d0d0d;
+  }
+  
+  body p {
+	color: yellow;
+	font-size: 1.15em;
+  }
+  
+  #video-placeholder {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+  }
+  
+  #closed-captions {
+	display: flex;
+	justify-content: center;
+  }
+  
+  #audio-captions1 {
+	display: flex;
+	justify-content: center;
+	opacity: 0;
+	margin-top: 35px;
+  }
+  
+  #audio-captions2 {
+	display: flex;
+	justify-content: center;
+	opacity: 0;
+}
+
 /* **********************************************
 Basic mechanics
 Hide all paragraphs by default
@@ -29,6 +62,7 @@ The first paragraph, with extended timing for
 	spoken.
 You probably want to change the styling.
 ********************************************** */
+
 .p0 span {
 	opacity: 0;
 	font-family: brenner;
@@ -103,14 +137,50 @@ Sounds.
 *********************************************  */
 
 /* The moment the class .sound1 is added to the body, the background is yellow */
-.sound1 {
-	background: purple;
-}
 
-iframe {
+.sound1 #video-placeholder {
+	box-shadow: 0 0 20px 15px red;
+	transition-duration: 0.5s;
+  }
+
+  .sound1 #audio-captions1 {
+	opacity: 1;
+	transition-duration: 0.5s;
+  }
+
+  .sound2 #video-placeholder {
+	box-shadow: 0 0 0 0;
+	transition-duration: 0.5s;
+  }
+
+  .sound2 #audio-captions1 {
+	opacity: 0;
+	transition-duration: 0.5s;
+  }
+
+  .sound3 #audio-captions1 {
+	opacity: 1;
+	transition-duration: 0.6s;
+  }
+
+  .sound4 #audio-captions1 {
+	opacity: 0;
+	transition-duration: 0.5s;
+  }
+
+
+/* The moment the class .sound1 is added to the body, the movie makes a turn */
+
+/*.sound1 iframe {
+	transform: rotate(1turn);
+}
+*/
+
+
+.sound8 {
+	background-color: white;
 	transition: 1s;
 }
-/* The moment the class .sound1 is added to the body, the movie makes a turn */
-.sound1 iframe {
-	transform: rotate(1turn);
+.sound8 p {
+	color: #0d0d0d;
 }
