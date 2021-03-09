@@ -10,6 +10,7 @@ body {
   #video-placeholder {
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 5%;
 	display: block;
   }
   
@@ -22,7 +23,7 @@ body {
 	display: flex;
 	justify-content: center;
 	opacity: 0;
-	margin-top: 35px;
+	margin-top: 50px;
   }
   
   #audio-captions2 {
@@ -51,7 +52,37 @@ Feel free to adjust the defaults to your needs.
 	opacity: 0;
 }
 .voice1 {
-	font-style: italic;
+	font-family: brenner Mono Regular;
+}
+
+.voice2 {
+	font-family: brenner Medium;
+}
+
+.voice2-1 {
+	margin-left: 10em;
+	font-family: brenner Medium;
+}
+
+.voice2-2 {
+	margin-right: 10em;
+	font-family: brenner Medium;
+}
+
+.voice2-3 {
+	font-family: brenner Medium;
+}
+
+.voice3 {
+	font-family: brenner bold;
+	margin: auto;
+    font-size: 2em;
+    color: yellow;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1em;
+    padding: 1rem 0;
+    animation: schaduw 2s infinite alternate ease-in-out;
 }
 
 /* **********************************************
@@ -63,7 +94,7 @@ The first paragraph, with extended timing for
 You probably want to change the styling.
 ********************************************** */
 
-.p0 span {
+/*.p0 span {
 	opacity: 0;
 	font-family: brenner;
 }
@@ -139,7 +170,7 @@ Sounds.
 /* The moment the class .sound1 is added to the body, the background is yellow */
 
 .sound1 #video-placeholder {
-	box-shadow: 0 0 20px 15px red;
+	box-shadow: 0 0 50px 35px red;
 	transition-duration: 0.5s;
   }
 
@@ -160,7 +191,18 @@ Sounds.
 
   .sound3 #audio-captions1 {
 	opacity: 1;
-	transition-duration: 0.6s;
+	transition-duration: 0.5s;
+  }
+
+
+.sound3 #video-placeholder {
+	box-shadow: 0 0 20px 10px red;
+	transition-duration: 0.5s;
+  }
+
+  .sound4 #video-placeholder {
+	box-shadow: 0 0 0 0;
+	transition-duration: 0.5s;
   }
 
   .sound4 #audio-captions1 {
@@ -168,6 +210,25 @@ Sounds.
 	transition-duration: 0.5s;
   }
 
+  .sound5 #audio-captions1 {
+	opacity: 1;
+	transition-duration: 0.5s;
+  }
+
+  .sound5 #video-placeholder {
+	box-shadow: 0 0 1000px 15px red;
+	transition-duration: 1.7s;
+  }
+
+  .sound6 #video-placeholder {
+	box-shadow: 0 0 0 0;
+	transition-duration: 0.5s;
+  }
+
+  .sound6 #audio-captions1 {
+	opacity: 0;
+	transition-duration: 0.5s;
+  }
 
 /* The moment the class .sound1 is added to the body, the movie makes a turn */
 
@@ -176,11 +237,51 @@ Sounds.
 }
 */
 
+/* animation voice 3 */
+@keyframes schaduw {
+    from {
+        text-shadow: -30px -30px 0.10em white, 40px 40px 0.10em white;
+    }
 
-.sound8 {
-	background-color: white;
-	transition: 1s;
+    to {
+        text-shadow: 900px 30px 0.10em white, -900px -40px 0.10em white;
+    }
 }
-.sound8 p {
-	color: #0d0d0d;
+
+
+
+.sound11 #audio-captions2 {
+	opacity: 1;
+	transition-duration: 0.5s;
+	background-position-x: left;
 }
+
+.sound11 {
+	background-color: darkblue;
+	transition-duration: 41s;
+}
+
+.sound11 #video-placeholder {
+	width: 700px;
+	height: 500px;
+	transition-duration: 42s;
+	
+}
+
+.sound13 #audio-captions2 {
+	opacity: 0;
+	transition-duration: 0.5s;
+}
+
+.sound13 #video-placeholder {
+	width: 600px;
+	height: 400px;
+	transition-duration: 0.5s;
+  }
+
+  .sound14 {
+	background-color: black;
+	transition-duration: 0.5;
+  }
+
+
