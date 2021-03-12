@@ -1,5 +1,7 @@
 body {
-	background-color: black;
+	background-color: #0d0d0d;
+	margin: 0;
+	padding: 0;
   }
   
   body p {
@@ -20,15 +22,35 @@ body {
   }
   
   #audio-captions1 {
-	display: flex;
-	justify-content: center;
-	opacity: 0;
-	margin-top: 50px;
+	display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+    justify-items: center;
+    grid-area: center;
+    align-items: center;
+	grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 100% 50% 50%;
   }
   
-  #audio-captions2 {
-	display: flex;
-	justify-content: center;
+
+#audio1 {
+	display: grid;
+	grid-column: 1 / -1;
+	grid-row: 3 / 3;
+	opacity: 0;
+}
+
+
+#audio2 {
+	display: grid;
+	grid-column: 1 / -1;
+	grid-row: 3 / 3;
+	opacity: 0;
+}
+
+#audio3 {
+	display: grid;
+	grid-column: 1 / -1;
+	grid-row: 3 / 3;
 	opacity: 0;
 }
 
@@ -74,15 +96,18 @@ Feel free to adjust the defaults to your needs.
 }
 
 .voice3 {
-	font-family: brenner bold;
+	font-family: brenner Slab;
 	margin: auto;
-    font-size: 2em;
-    color: yellow;
-    font-weight: bold;
+    font-size: 1.5em;
+    color: grey;
     text-align: center;
     line-height: 1em;
     padding: 1rem 0;
     animation: schaduw 2s infinite alternate ease-in-out;
+}
+
+.voice4 {
+	font-family: brenner Sans;
 }
 
 /* **********************************************
@@ -172,9 +197,30 @@ Sounds.
 .sound1 #video-placeholder {
 	box-shadow: 0 0 50px 35px red;
 	transition-duration: 0.5s;
+	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
   }
 
-  .sound1 #audio-captions1 {
+  /* Bron: https://css-tricks.com/snippets/css/shake-css-keyframe-animation/*/
+
+  @keyframes shake {
+	10%, 90% {
+		transform: translate3d(-1px, 0, 0);
+	  }
+	  
+	  20%, 80% {
+		transform: translate3d(2px, 0, 0);
+	  }
+	
+	  30%, 50%, 70% {
+		transform: translate3d(-4px, 0, 0);
+	  }
+	
+	  40%, 60% {
+		transform: translate3d(4px, 0, 0);
+	  }
+	}
+
+  .sound1 #audio1 {
 	opacity: 1;
 	transition-duration: 0.5s;
   }
@@ -184,16 +230,15 @@ Sounds.
 	transition-duration: 0.5s;
   }
 
-  .sound2 #audio-captions1 {
+  .sound2 #audio1 {
 	opacity: 0;
 	transition-duration: 0.5s;
   }
 
-  .sound3 #audio-captions1 {
+  .sound3 #audio1 {
 	opacity: 1;
 	transition-duration: 0.5s;
   }
-
 
 .sound3 #video-placeholder {
 	box-shadow: 0 0 20px 10px red;
@@ -205,19 +250,20 @@ Sounds.
 	transition-duration: 0.5s;
   }
 
-  .sound4 #audio-captions1 {
+  .sound4 #audio1 {
 	opacity: 0;
 	transition-duration: 0.5s;
   }
 
-  .sound5 #audio-captions1 {
+  .sound5 #audio1 {
 	opacity: 1;
 	transition-duration: 0.5s;
   }
 
   .sound5 #video-placeholder {
 	box-shadow: 0 0 1000px 15px red;
-	transition-duration: 1.7s;
+	transition-timing-function: cubic-bezier(.14, .44, 1, .65);
+	transition-duration: 1s;
   }
 
   .sound6 #video-placeholder {
@@ -225,10 +271,74 @@ Sounds.
 	transition-duration: 0.5s;
   }
 
-  .sound6 #audio-captions1 {
+  .sound6 #audio1 {
 	opacity: 0;
 	transition-duration: 0.5s;
   }
+
+   .sound7 #video-placeholder {
+	box-shadow: 0 0 20px 15px red;
+	transition-timing-function: cubic-bezier(.14, .44, 1, .65);
+	transition-duration: 1.4s;
+  }
+
+  .sound8 #audio1 {
+	opacity: 1;
+	transition-duration: 0.5s;
+  }
+
+  .sound9 #video-placeholder {
+	box-shadow: 0 0 0 0;
+	transition-duration: 0.5s;
+  }
+
+  .sound9 #audio1 {
+	opacity: 0;
+	transition-duration: 0.5s;
+  }
+  
+  .sound10 #audio1 {
+	opacity: 1;
+	transition-duration: 0.5s;
+  }
+
+ /* .sound10 #video-placeholder {
+	box-shadow: 0 0 50px 35px red;
+	transition-duration: 1s;
+  }
+  
+  .sound11 #video-placeholder {
+	box-shadow: 0 0 0 0;
+	transition-duration: 0.5s;
+  }
+  */
+
+  .sound11 #audio1 {
+	opacity: 0;
+	transition: 0.5s;
+  }
+
+  .sound12 #audio2 {
+	opacity: 1;
+	transition: 0.5s;
+  }
+
+  .sound13 #audio2 {
+	opacity: 0;
+	transition: 0.5s;
+  }
+
+  .sound16 #audio3 { 
+	  opacity 1;
+	  transition: 0,5s;
+  }
+
+  .sound20 #audio3 {
+	opacity 1;
+	transition: 0,5s;
+}
+  
+  
 
 /* The moment the class .sound1 is added to the body, the movie makes a turn */
 
@@ -248,8 +358,6 @@ Sounds.
     }
 }
 
-
-
 .sound11 #audio-captions2 {
 	opacity: 1;
 	transition-duration: 0.5s;
@@ -257,8 +365,14 @@ Sounds.
 }
 
 .sound11 {
-	background-color: darkblue;
+	background-color: yellow;
 	transition-duration: 41s;
+	transition-timing-function: cubic-bezier(.82, .19, .86, .56);
+}
+
+.sound11 p {
+	background-color: #0d0d0d;
+	padding: 5px;
 }
 
 .sound11 #video-placeholder {
@@ -279,9 +393,98 @@ Sounds.
 	transition-duration: 0.5s;
   }
 
-  .sound14 {
+  .sound13 {
 	background-color: black;
-	transition-duration: 0.5;
+	transition-duration: 0.5s;
   }
 
+  .sound13 p{
+	background-color: black;
+  }
 
+  .sound15 #audio3 {
+	opacity: 1;
+	transition-duration: 0.5s;
+  }
+
+  .sound15 #giphy-embed {
+	opacity: 1;
+	transition-duration: 0.5s;
+  }
+
+  .sound15 #giphy-embed2 {
+	opacity: 1;
+	transition-duration: 0.5s;
+  }
+
+  .sound18 #audio3 {
+	opacity: 0;
+	transition-duration: 0.5s;
+  }
+
+  .sound16{
+	  background-color: #00003f;
+	  transition-duration: 0,5s;
+	  transition-timing-function: cubic-bezier(.82, .19, .86, .56);
+  }
+
+  .sound16 #giphy-embed {
+	opacity: 0;
+	transition-duration: 0.5s;
+  }
+
+  .sound16 #giphy-embed2 {
+	opacity: 0;
+	transition-duration: 0.5s;
+  }
+
+  .sound17{
+	  background-color: black;
+	  transition-timing-function: cubic-bezier(.82, .19, .86, .56);
+	  transition-duration: 0,5s;
+  }
+
+  .sound17 #giphy-embed {
+	opacity: 1;
+	transition-timing-function: cubic-bezier(.82, .19, .86, .56);
+	transition-duration: 3s;
+  }
+
+  .sound17 #giphy-embed2 {
+	opacity: 1;
+	transition-timing-function: cubic-bezier(.82, .19, .86, .56);
+	transition-duration: 3s;
+  }
+
+  .sound18{
+	background-color: #00003f;
+	transition-duration: 0,5s;
+	transition-timing-function: cubic-bezier(.82, .19, .86, .56);
+}
+
+.sound19{
+	background-color: black;
+	transition-timing-function: cubic-bezier(.82, .19, .86, .56);
+	transition-duration: 0,5s;
+}
+
+.sound18 #giphy-embed {
+	opacity: 0;
+	transition-duration: 0.5s;
+  }
+
+  .sound18 #giphy-embed2 {
+	opacity: 0;
+	transition-duration: 0.5s;
+  }
+
+#giphy-embed {
+	position: absolute;
+	opacity: 0;
+}
+
+#giphy-embed2 {
+	position: absolute;
+	margin-left: 1050px;
+	opacity: 0;
+}
