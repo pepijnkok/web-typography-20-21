@@ -1,5 +1,5 @@
 body {
-	background-color: #0d0d0d;
+	background-color: black;
 	margin: 0;
 	padding: 0;
   }
@@ -32,6 +32,8 @@ body {
   }
   
 
+  /* grid voor audio captions*/
+
 #audio1 {
 	display: grid;
 	grid-column: 1 / -1;
@@ -61,6 +63,7 @@ Show them when they receive the class 'on'
 Hide them when they receive the class 'off'
 Feel free to adjust the defaults to your needs.
 ********************************************** */
+
 #closed-captions p {
 	opacity: 0;
 	transition: .05s;
@@ -302,16 +305,16 @@ Sounds.
 	transition-duration: 0.5s;
   }
 
- /* .sound10 #video-placeholder {
+  .sound10 #video-placeholder {
 	box-shadow: 0 0 50px 35px red;
 	transition-duration: 1s;
   }
   
   .sound11 #video-placeholder {
 	box-shadow: 0 0 0 0;
-	transition-duration: 0.5s;
+	transition-duration: 2s;
   }
-  */
+  
 
   .sound11 #audio1 {
 	opacity: 0;
@@ -402,6 +405,10 @@ Sounds.
 	background-color: black;
   }
 
+  .sound15 p{
+	background-color: transparent;
+  }
+
   .sound15 #audio3 {
 	opacity: 1;
 	transition-duration: 0.5s;
@@ -422,11 +429,13 @@ Sounds.
 	transition-duration: 0.5s;
   }
 
-  .sound16{
+  .sound16 {
 	  background-color: #00003f;
 	  transition-duration: 0,5s;
 	  transition-timing-function: cubic-bezier(.82, .19, .86, .56);
   }
+
+  
 
   .sound16 #giphy-embed {
 	opacity: 0;
@@ -447,13 +456,13 @@ Sounds.
   .sound17 #giphy-embed {
 	opacity: 1;
 	transition-timing-function: cubic-bezier(.82, .19, .86, .56);
-	transition-duration: 3s;
+	transition-duration: 2s;
   }
 
   .sound17 #giphy-embed2 {
 	opacity: 1;
 	transition-timing-function: cubic-bezier(.82, .19, .86, .56);
-	transition-duration: 3s;
+	transition-duration: 2s;
   }
 
   .sound18{
@@ -477,6 +486,8 @@ Sounds.
 	opacity: 0;
 	transition-duration: 0.5s;
   }
+
+  /* gif */
 
 #giphy-embed {
 	position: absolute;
