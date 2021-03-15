@@ -98,6 +98,13 @@ Feel free to adjust the defaults to your needs.
 	font-family: brenner Medium;
 }
 
+.voice3::before {
+content: "passerby whispering:";
+
+margin-right: 0.5rem;
+font-size: 0.9rem;
+}
+
 .voice3 {
 	font-family: brenner Slab;
 	margin: auto;
@@ -106,7 +113,7 @@ Feel free to adjust the defaults to your needs.
     text-align: center;
     line-height: 1em;
     padding: 1rem 0;
-    animation: schaduw 2s infinite alternate ease-in-out;
+
 }
 
 .voice4 {
@@ -305,7 +312,7 @@ Sounds.
 	transition-duration: 0.5s;
   }
 
-  .sound10 #video-placeholder {
+  /*.sound10 #video-placeholder {
 	box-shadow: 0 0 50px 35px red;
 	transition-duration: 1s;
   }
@@ -314,6 +321,8 @@ Sounds.
 	box-shadow: 0 0 0 0;
 	transition-duration: 2s;
   }
+  */
+  
   
 
   .sound11 #audio1 {
