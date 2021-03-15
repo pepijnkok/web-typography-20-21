@@ -5,7 +5,7 @@ body {
   }
   
   body p {
-	color: yellow;
+	color: white;
 	font-size: 1.15em;
   }
   
@@ -78,24 +78,29 @@ Feel free to adjust the defaults to your needs.
 }
 .voice1 {
 	font-family: brenner Mono Regular;
+	color: yellow;
 }
 
 .voice2 {
 	font-family: brenner Medium;
+	color: white;
 }
 
 .voice2-1 {
 	margin-left: 10em;
 	font-family: brenner Medium;
+	color: white;
 }
 
 .voice2-2 {
 	margin-right: 10em;
 	font-family: brenner Medium;
+	color: white;
 }
 
 .voice2-3 {
 	font-family: brenner Medium;
+	color: white;
 }
 
 .voice3::before {
@@ -118,6 +123,7 @@ font-size: 0.9rem;
 
 .voice4 {
 	font-family: brenner Sans;
+	color: green;
 }
 
 /* **********************************************
