@@ -10,11 +10,23 @@ body {
   }
   
   #video-placeholder {
+	width: 800px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 5%;
 	display: block;
   }
+
+
+  /* gif */
+#giphy-embed {
+	z-index: -1;
+	position: absolute;
+	opacity: 1;
+	width: 88em;
+	transform: scale(4.0);
+	opacity: 0;
+}
   
   #closed-captions {
 	display: flex;
@@ -104,16 +116,14 @@ Feel free to adjust the defaults to your needs.
 }
 
 .voice3::before {
-content: "passerby whispering:";
-
+content: "Passerby whispering:";
 margin-right: 0.5rem;
-font-size: 0.9rem;
+
 }
 
 .voice3 {
 	font-family: brenner Slab;
 	margin: auto;
-    font-size: 1.5em;
     color: grey;
     text-align: center;
     line-height: 1em;
@@ -318,18 +328,15 @@ Sounds.
 	transition-duration: 0.5s;
   }
 
-  /*.sound10 #video-placeholder {
+  /* .sound10 #video-placeholder {
 	box-shadow: 0 0 50px 35px red;
 	transition-duration: 1s;
   }
   
   .sound11 #video-placeholder {
 	box-shadow: 0 0 0 0;
-	transition-duration: 2s;
-  }
-  */
-  
-  
+	transition-duration: 1s;
+  } */  
 
   .sound11 #audio1 {
 	opacity: 0;
@@ -341,7 +348,8 @@ Sounds.
 	transition: 0.5s;
   }
 
-  .sound13 #audio2 {
+
+  .sound17 #audio2 {
 	opacity: 0;
 	transition: 0.5s;
   }
@@ -383,134 +391,176 @@ Sounds.
 }
 
 .sound11 {
-	background-color: yellow;
+	background-color: white;
+	-webkit-animation: NAME-YOUR-ANIMATION 5s infinite;  /* Safari 4+ */
+	-moz-animation: NAME-YOUR-ANIMATION 5s infinite;  /* Fx 5+ */
+	-o-animation: NAME-YOUR-ANIMATION 5s infinite;  /* Opera 12+ */
+	animation: NAME-YOUR-ANIMATION 5s infinite;  /* IE 10+, Fx 29+ */
 	transition-duration: 41s;
 	transition-timing-function: cubic-bezier(.82, .19, .86, .56);
 }
 
 .sound11 p {
-	background-color: #0d0d0d;
+	background-color: black;
 	padding: 5px;
 }
 
 .sound11 #video-placeholder {
-	width: 700px;
-	height: 500px;
+	width: 500px;
 	transition-duration: 42s;
 	
 }
 
-.sound13 #audio-captions2 {
+ /* Bron: https://stackoverflow.com/questions/34439452/blinking-background-color-animation */
+.sound12 {
+	-webkit-animation: NAME-YOUR-ANIMATION 4s infinite;  /* Safari 4+ */
+	-moz-animation: NAME-YOUR-ANIMATION 4s infinite;  /* Fx 5+ */
+	-o-animation: NAME-YOUR-ANIMATION 4s infinite;  /* Opera 12+ */
+	animation: NAME-YOUR-ANIMATION 4s infinite;  /* IE 10+, Fx 29+ */
+	
+}
+
+.sound13 {
+	-webkit-animation: NAME-YOUR-ANIMATION 3s infinite;  /* Safari 4+ */
+	-moz-animation: NAME-YOUR-ANIMATION 3s infinite;  /* Fx 5+ */
+	-o-animation: NAME-YOUR-ANIMATION 3s infinite;  /* Opera 12+ */
+	animation: NAME-YOUR-ANIMATION 3s infinite;  /* IE 10+, Fx 29+ */
+}
+
+.sound14 {
+	-webkit-animation: NAME-YOUR-ANIMATION 2s infinite;  /* Safari 4+ */
+	-moz-animation: NAME-YOUR-ANIMATION 2s infinite;  /* Fx 5+ */
+	-o-animation: NAME-YOUR-ANIMATION 2s infinite;  /* Opera 12+ */
+	animation: NAME-YOUR-ANIMATION 2s infinite;  /* IE 10+, Fx 29+ */
+}
+
+.sound15 {
+	-webkit-animation: NAME-YOUR-ANIMATION 1s infinite;  /* Safari 4+ */
+	-moz-animation: NAME-YOUR-ANIMATION 1s infinite;  /* Fx 5+ */
+	-o-animation: NAME-YOUR-ANIMATION 1s infinite;  /* Opera 12+ */
+	animation: NAME-YOUR-ANIMATION 1s infinite;  /* IE 10+, Fx 29+ */
+}
+
+.sound16 {
+	-webkit-animation: NAME-YOUR-ANIMATION .5s infinite;  /* Safari 4+ */
+	-moz-animation: NAME-YOUR-ANIMATION .5s infinite;  /* Fx 5+ */
+	-o-animation: NAME-YOUR-ANIMATION .5s infinite;  /* Opera 12+ */
+	animation: NAME-YOUR-ANIMATION .5s infinite;  /* IE 10+, Fx 29+ */
+}
+
+.sound17 #audio-captions2 {
 	opacity: 0;
 	transition-duration: 0.5s;
 }
 
-.sound13 #video-placeholder {
-	width: 600px;
-	height: 400px;
+.sound17 #video-placeholder {
+	width: 800px;
 	transition-duration: 0.5s;
   }
 
-  .sound13 {
+  .sound17 {
 	background-color: black;
 	transition-duration: 0.5s;
   }
 
-  .sound13 p{
+  .sound17 p{
 	background-color: black;
   }
 
-  .sound15 p{
+  .sound17 {
+	  animation: none;
+	  background: none;
+	  background-color: black;
+  }
+
+  .sound19 p{
 	background-color: transparent;
   }
 
-  .sound15 #audio3 {
+  .sound19 #audio3 {
 	opacity: 1;
 	transition-duration: 0.5s;
   }
 
-  .sound15 #giphy-embed {
+  .sound19 #giphy-embed {
 	opacity: 1;
 	transition-duration: 0.5s;
   }
 
-  .sound15 #giphy-embed2 {
+  .sound19 #giphy-embed2 {
 	opacity: 1;
 	transition-duration: 0.5s;
   }
 
-  .sound18 #audio3 {
+  .sound22 #audio3 {
 	opacity: 0;
 	transition-duration: 0.5s;
   }
 
-  .sound16 {
+  .sound20 {
 	  background-color: #00003f;
 	  transition-duration: 0,5s;
 	  transition-timing-function: cubic-bezier(.82, .19, .86, .56);
   }
 
   
-
-  .sound16 #giphy-embed {
+  .sound20 #giphy-embed {
 	opacity: 0;
 	transition-duration: 0.5s;
   }
 
-  .sound16 #giphy-embed2 {
+  .sound20 #giphy-embed2 {
 	opacity: 0;
 	transition-duration: 0.5s;
   }
 
-  .sound17{
+  .sound21 {
 	  background-color: black;
 	  transition-timing-function: cubic-bezier(.82, .19, .86, .56);
 	  transition-duration: 0,5s;
   }
 
-  .sound17 #giphy-embed {
+  .sound21 #giphy-embed {
 	opacity: 1;
 	transition-timing-function: cubic-bezier(.82, .19, .86, .56);
 	transition-duration: 2s;
   }
 
-  .sound17 #giphy-embed2 {
+  .sound21 #giphy-embed2 {
 	opacity: 1;
 	transition-timing-function: cubic-bezier(.82, .19, .86, .56);
 	transition-duration: 2s;
   }
 
-  .sound18{
+  .sound22{
 	background-color: #00003f;
 	transition-duration: 0,5s;
 	transition-timing-function: cubic-bezier(.82, .19, .86, .56);
 }
 
-.sound19{
+.sound23{
 	background-color: black;
 	transition-timing-function: cubic-bezier(.82, .19, .86, .56);
 	transition-duration: 0,5s;
 }
 
-.sound18 #giphy-embed {
+.sound22 #giphy-embed {
 	opacity: 0;
 	transition-duration: 0.5s;
   }
 
-  .sound18 #giphy-embed2 {
+  .sound22 #giphy-embed2 {
 	opacity: 0;
 	transition-duration: 0.5s;
   }
 
-  /* gif */
 
-#giphy-embed {
-	position: absolute;
-	opacity: 0;
-}
+  @-webkit-keyframes NAME-YOUR-ANIMATION {
+	0%, 50% {
+	  background-color: white;
+	}
+	50%, 70% {
+	  background-color: black;
+	}
 
-#giphy-embed2 {
-	position: absolute;
-	margin-left: 1050px;
-	opacity: 0;
-}
+  }
