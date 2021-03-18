@@ -498,7 +498,7 @@ Sounds.
   }
 
   .sound20 {
-	  background-color: #00003f;
+	  background-color: #FEE12B;
 	  transition-duration: 0,5s;
 	  transition-timing-function: cubic-bezier(.82, .19, .86, .56);
   }
@@ -533,7 +533,7 @@ Sounds.
   }
 
   .sound22{
-	background-color: #00003f;
+	background-color: #FEE12B;
 	transition-duration: 0,5s;
 	transition-timing-function: cubic-bezier(.82, .19, .86, .56);
 }
